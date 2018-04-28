@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="jquery-ui.css">  
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>  
+<script> 
+$(function() {   
+	$( "#tabs" ).tabs(); 
+	
+		
+
+	}); 
+</script>
+<link rel="stylesheet" href="style.css">
+<style>
+.error{
+border: 1px red solid;
+}
+.container{
+	margin:100px auto;
+    font-family: 'Droid Serif', serif;
+    width:940px;
+    height:800px;
+}
+.main {
+width: 420px;
+height : 800px;
+margin-left:150px;
+float:left;
+border:2px orange solid;
+padding: 10px 55px 40px;
+background-color:#FFCC99;
+font-size: 13px;
+}
+#cname,#cemail,#c1password,#c2password,#cmobileno{
+width: 97.7%;
+height: 34px;
+padding-left: 5px;
+margin-bottom: 20px;
+margin-top: 8px;
+box-shadow: 0 0 5px #00F5FF;
+border: 2px solid #00F5FF;
+color: #4f4f4f;
+font-size: 16px;
+}
+#logo1{
+	margin-left: 120px;
+	margin-bottom:10px;
+	
+}
+
+/* h2{
+text-align: center;
+font-size: 24px;
+} */
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 11px;
+font-weight: bold;
+
+}
+#cday,#cmonth,#cyear{
+  	width: 15%;
+  	height: 24px;
+	padding-left: 5px;
+	margin-bottom: 20px;
+	margin-top: 8px;
+	box-shadow: 0 0 5px #00F5FF;
+	border: 2px solid #00F5FF;
+}
+#register {
+font-size: 20px;
+margin-top: 15px;
+background:blue;
+border: 1px solid #0F799E;
+padding: 7px 35px;
+color: white;
+text-shadow: 0px 1px 0px #13506D;
+font-weight: bold;
+border-radius: 2px;
+cursor: pointer;
+width: 100%;
+}
+
+#container1{
+	margin:10px auto;
+    width:740px;
+    height:1000px;
+}
+#main1 {
+width: 520px;
+height:840px;
+margin-left:20px;
+float:left;
+border:2px orange solid;
+padding: 15px 55px 44px 35px;
+background-color:#FFCC99;
+font-size: 13px;
+}
+#logo{
+	margin-left: 190px;
+	margin-bottom:10px;
+	
+}
+
+#company1{margin-left:21%;margin-bottom:15px;color:green;}
+
+#container1 table { border-collapse: collapse;margin-left :52px;margin-bottom:25px; border: 1px solid green}
+#order-table { width: 80%; }
+
+#order-table th { padding: 5px; background: green; color: white; text-align: center; }
+#paymentlabel { padding: 5px; background: green; color: white; width:260px;border : 1px green solid; }
+#payment1 td input{text-align: center;}
+#order-table td input{ width: 75px; text-align: center;border: 2px solid green }
+#order-table tr.even td { background: #eee; }
+#order-table td .total-box, .total-box { border: 3px solid green; width: 75px; padding: 3px; margin: 5px 0 5px 0; text-align: center; font-size: 11px; }
+#buy input{ padding: 5px; background: green; color: white; text-align: center; border: 1px green solid;margin-left:50%}
+
+#payment1,#paymentlabel,#payment2 {     
+	margin : 10px 5px 400px 200px;
+	width: 260px;
+    margin: 10px auto;
+}
+
+#container2{
+      width:900px;
+      height:1000px;
+}
+#main2{
+	width:600px;
+	height:550px;
+	border:1px solid orange;
+	background-color:#FFCC99;
+	color:green;
+}
+#logo2{
+	margin-left: 190px;	margin-bottom:10px;margin-top:5px;
+}
+#company2 h2 {margin-left:120px}
+#company2 h3 {margin-left:140px}
+
+#header h1 { 
+			width :1200px;
+			height : 60px;
+			background-color:green;
+			color:orange;
+			text-align: center;
+		}
+
+#footer h4 { 
+			width :1200px;
+			height : 30px;
+			background-color:green;
+			color:orange;
+			text-align: center;
+		}
+
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>Zucca Online Pucharse</h1>
+</div>
+ 
+<div id="tabs">
+
+  <ul>
+    <li><a href="#registration">Registration</a></li>
+    <li><a href="#ourproducts">Products</a></li>
+    <li><a href="#purchase">Purchase</a></li>
+    <li><a href="#feedback">Feedback</a></li>
+
+  </ul>
+  <div id="registration">
+  	<div class="container">
+	<div class="main">
+	<div id="logo1">
+  			<img src="new_logo.png" alt="Poppy" />
+	</div>
+		<form id="custform">
+			<h2>Customer Registration Form</h2>
+			<label>Name :</label>
+			<input type="text" name="cname" id="cname">
+			<label>Email :</label>
+			<input type="text" name="cemail" id="cemail">
+			<label>Password :</label>
+			<input type="password" name="c1password" id="c1password">
+			<label>Confirm Password :</label>
+			<input type="password" name="c2password" id="c2password">
+			<label>Dob (dd mm yyyy):</label>
+			<br>
+			<input type="text" name="cday" id="cday">
+			<input type="text" name="cmonth" id="cmonth">
+			<input type="text" name="cyear" id="cyear">
+			<br>
+			<label>Mobile No : (10 digit only)</label>
+			<input type="text" name="cmobileno" id="cmobileno">
+			<input type="button" name="register" id="register" value="Register">
+		</form>
+	</div>
+	</div>
+  </div>
+ <!--  End of Registration -->
+  <div id="purchase">
+  	<div id="container1">
+		<div id="main1">
+		<div id="logo">
+  			<img src="new_logo.png" alt="Poppy" />
+		</div>
+		<div id="company1"><h3>Welcome to Zucca Online Purhcase</h3></div>
+  		<div id="products">
+			<table id="order-table">
+    	    	<tbody><tr>
+    	        	 <th>Product Name</th>
+    	         	 <th>Quantity</th>
+    	         	 <th>X</th>
+    	         	<th>Unit Price</th>
+    	         	<th>=</th>
+    	         	<th style="text-align: right; padding-right: 30px;">Totals</th>
+    	    	</tr>
+            	<tr class="odd">
+                	<td class="product-title prod-1" >Air Conditioner</td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="sparkle-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>115</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="sparkle-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr class="even">
+                	<td class="product-title prod-2" >Water Purifier</td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="turface-mvp-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>130</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="turface-mvp-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr class="odd">
+                	<td class="product-title prod-3" >Stabilizer</td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="turface-pro-league-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>340</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="turface-pro-league-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr class="even">
+                	<td class="product-title prod-4" >Television</em></td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="turface-pro-league-red-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>455</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="turface-pro-league-red-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr class="odd">
+                	<td class="product-title prod-4" >AirCooler</em></td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="turface-pro-league-red-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>455</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="turface-pro-league-red-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr class="even">
+                	<td class="product-title prod-4" >HomeTheater</em></td>
+                	<td class="num-pallets"><input type="text" class="num-pallets-input" id="turface-pro-league-red-num-pallets"></td>
+                	<td class="times">X</td>
+                	<td class="price-per-pallet">$<span>455</span></td>
+                	<td class="equals">=</td>
+                	<td class="row-total"><input type="text" class="row-total-input" id="turface-pro-league-red-row-total" disabled="disabled"></td>
+            	</tr>
+            	<tr>
+                	<td colspan="5" style="text-align: right;">Product SUBTOTAL:</td>
+     				<td><input type="text" class="total-box" value="$0" id="product-subtotal" disabled="disabled"></td>
+            	</tr>
+            	</tbody>
+        </table>
+   </div>
+   
+	<div id="paymentlabel">PAYMENT METHOD
+		<table class="tabledeco">
+        	<tr>
+        		<td><input type="radio" id="debitcardpayment" name="payment" value="debitcard">
+            		Debit Card
+				</td>
+       	 	</tr>
+        	<tr>
+        		<td><input type="radio" id="creditcardpayment" name="payment" value="debitcard">
+            		Credit Card
+				</td>
+        	</tr>
+        	<tr>
+        		<td><input type="radio" id="netbankingpayment" name="payment" value="debitcard">
+            		Net Banking
+				</td>
+        	</tr>
+ 		</table>
+	</div>
+
+ 	<div id="payment1"> Card Detail
+ 		<table>
+ 			<tr>
+ 				<td><INPUT type="text" id="cardno" value="" name="username" title="Credit Card Number"/></td>
+ 			</tr>
+ 			<tr align="left">
+ 				<td><INPUT type="text" id="expirydate"  value="" name="expirydate" title="MM/YY" style="width:30%"/>
+ 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" id="cvv"  value="" name="cvv" title="CVV" style="width:30%"/></td>
+ 			</tr>
+ 			<tr>
+ 				<td><INPUT type="text" id="nameoncard" value="" name="nameoncard" title="Name On Card"/></td>
+ 			</tr>
+ 		</table>
+ 	</div>
+ 
+ 	<div id="payment2">
+ 		<table>
+ 			<tr>
+ 				<td><b>Select Bank</b></td>
+ 				<td><select name="list-select" id="list-select">
+     				<option value="">Please select.</option>
+     				<option value="hdfc">HDFC</option>
+     				<option value="icici">ICICI</option>
+     				<option value="sbi">SBI</option>
+					</select>
+				</td>
+ 			</tr>
+ 		</table>
+ 	</div>
+ 	
+ 	<input type="checkbox" name="termsandconditions" id="termsandconditions" value="agree" /> I agree with the terms and conditions of the company
+ 	
+ 	<div id="buy">
+ 		<input type="button" name="buy" id="buy" value="Buy">
+ 	</div>
+ 
+ </div>
+</div>
+  
+ </div>
+ <!-- End of Purchase -->
+ 
+ <div id="ourproducts">
+ <table border="1">
+ <tr>
+ 	<td>
+	           <div id=ref1>
+			     <img src="refrigerator1.jpg" alt="" />
+  				 <b>MRP.15,990/-</b>
+  				 </div>
+  </td>
+  <td>
+  				 <div id=ref1_info"></div>
+  </td>
+  <td>
+  				<div id="ref2">
+  				<img src="refrigerator2.jpg" alt="" />
+  				<b>MRP.17,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ref2_info"></div>
+  </td>
+  <td>
+  				<div id="ref3">
+  				<img src="refrigerator3.jpg" alt="" />
+  				<b>MRP.19,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ref3_info"></div>
+  </td>
+  </tr>
+  	
+  <tr>
+ 	<td>
+	           <div id=cool1>
+			     <img src="aircooler1.jpg" alt="" />
+  				 <b>MRP.15,990/-</b>
+  				 </div>
+  </td>
+  <td>
+  				 <div id=cool1_info"></div>
+  </td>
+  <td>
+  				<div id="cool2">
+  				<img src="aircooler2.jpg" alt="" />
+  				<b>MRP.17,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="cool2_info"></div>
+  </td>
+  <td>
+  				<div id="cool3">
+  				<img src="aircooler3.jpg" alt="" />
+  				<b>MRP.19,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="cool3_info"></div>
+  </td>
+  </tr>	
+  	
+<tr>
+ 	<td>
+	           <div id=ht1>
+			     <img src="ht1.jpg" alt="" />
+  				 <b>MRP.15,990/-</b>
+  				 </div>
+  </td>
+  <td>
+  				 <div id=ht2_info"></div>
+  </td>
+  <td>
+  				<div id="ht2">
+  				<img src="ht2.jpg" alt="" />
+  				<b>MRP.17,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ht2_info"></div>
+  </td>
+  <td>
+  				<div id="ht3">
+  				<img src="ht3.jpg" alt="" />
+  				<b>MRP.19,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ht3_info"></div>
+  </td>
+  </tr>	  	
+  
+  <tr>
+ 	<td>
+	           <div id=ac1>
+			     <img src="ac1.jpg" alt="" />
+  				 <b>MRP.15,990/-</b>
+  				 </div>
+  </td>
+  <td>
+  				 <div id=ac1_info"></div>
+  </td>
+  <td>
+  				<div id="ac2">
+  				<img src="ac2.jpg" alt="" />
+  				<b>MRP.17,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ac2_info"></div>
+  </td>
+  <td>
+  				<div id="ac3">
+  				<img src="ac3.jpg" alt="" />
+  				<b>MRP.19,990/-</b>
+  				</div>
+  </td>
+  <td>
+  				<div id="ac3_info"></div>
+  </td>
+ </tr>
+ </table>
+ </div>
+ 
+  <div id="feedback">
+  	<div id="container2">
+		<div id="main2">
+			<div id="logo2">
+  				<img src="new_logo.png" alt="Poppy" />
+			</div>
+	<div id="company2">
+		<h2>Zucca Online Purchase</h2>
+		<h3>Your Feedback Comments</h3>
+	</div>
+	<form id="feedbackform">
+		<table>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="emailid" id="emailid"/></td>
+			</tr>
+			<tr>
+				<td>Message:</td>
+				<td><textarea rows="4" cols="50" name="message" id="message"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button name="feedbacksubmit" id="feedbacksubmit">SEND</button></td>
+			</tr>
+		</table>
+		<div id="divData"></div>
+	</form>
+	</div>
+	</div>
+    </div>
+    
+<!-- End of Feedback -->
+
+<div id="footer">
+ <h4>Copyright &copy; Zucca Online 2013-2014. All Rights Reserved.</h4>
+</div>
+  
+</div>
+<!-- End of Tab -->
+
+ 
+</body>
+
+
+</html>
