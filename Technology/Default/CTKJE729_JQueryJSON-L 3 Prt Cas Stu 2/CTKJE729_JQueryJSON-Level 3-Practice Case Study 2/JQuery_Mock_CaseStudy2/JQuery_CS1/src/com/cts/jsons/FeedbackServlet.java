@@ -58,7 +58,7 @@ public class FeedbackServlet extends HttpServlet {
 	            file.close();
 	        }
 		  
-		  
+		  //printing JSon
 		  out.print(json);
 	}
 
